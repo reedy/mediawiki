@@ -381,8 +381,10 @@ class ThumbnailImage extends MediaTransformOutput {
 			&& $this->width * $this->height > 100 * 100 ) {
 			self::$firstNonIconImageRendered = true;
 
-			$attribs['importance'] = 'high';
-			$elementTimingName = 'thumbnail-high';
+			if ( rand( 0, 1 ) ) {
+				$attribs['importance'] = 'high';
+				$elementTimingName = 'thumbnail-high';
+			}
 		}
 
 		if ( $wgElementTiming ) {
