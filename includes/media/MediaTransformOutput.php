@@ -384,6 +384,8 @@ class ThumbnailImage extends MediaTransformOutput {
 			if ( rand( 0, 1 ) ) {
 				$attribs['importance'] = 'high';
 				$elementTimingName = 'thumbnail-high';
+			} else {
+				$elementTimingName = 'thumbnail-top';
 			}
 		}
 
